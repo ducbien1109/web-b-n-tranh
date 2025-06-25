@@ -1,0 +1,70 @@
+/* Wrapper tổng thể */
+/* .content-wrapper {
+  padding: 20px;
+} */
+
+/* Tiêu đề chính */
+.content-title {
+  text-align: center;
+  
+  font-size: 24px;
+}
+
+/* Nút lọc */
+.btn-sort {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Tiêu đề từng loại tranh */
+.category-title {
+  margin: 30px 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Danh sách sản phẩm - dùng Grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Mặc định desktop 4 cột */
+  gap: 20px;
+  padding: 0 30px;
+}
+
+/* Card từng sản phẩm */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-link {
+  text-decoration: none;
+  color: #444;
+}
+
+.product-name,
+.product-price {
+  margin: 5px 0;
+}
+
+/* 🔻 Responsive: mỗi hàng 2 sản phẩm khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+}

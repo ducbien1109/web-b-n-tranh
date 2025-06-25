@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Menu wrapper */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo có hiệu ứng rồng */
+.Name-brand {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-image: url("https://free.vector6.com/wp-content/uploads/2020/03/StockAnhDep021.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+/* Left / Right menu */
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon,
+.menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.header-right p {
+  cursor: pointer;
+}
+
+/* Menu ẩn mặc định trên mobile */
+.mobile-menu {
+  display: none;
+}
+/* slide */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+/* Ảnh banner */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Chữ phủ lên ảnh */
+.discover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Ẩn chữ khi mobile */
+  .header-right p {
+    display: none;
+  }
+
+  .Name-brand {
+    font-size: 20px;
+  }
+
+  .mobile-menu {
+    display: block;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+  }
+
+  .mobile-menu p {
+    margin: 8px 0;
+    cursor: pointer;
+  }
+  .slide-content {
+    height: 300px;
+  }
+
+  .discover p {
+    font-size: 14px;
+  }
+
+  .discover h2 {
+    font-size: 18px;
+  }
+
+  .discover h5 {
+    font-size: 12px;
+  }
+  #mobile-intro{
+    width: 100%;
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.menu-icon,
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Name-brand {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right p {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.mobile-menu {
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+}
+
+.mobile-menu p {
+  margin: 10px 0;
+  cursor: pointer;
+}
