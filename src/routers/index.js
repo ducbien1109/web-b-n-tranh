@@ -9,6 +9,8 @@ import Oders from "../admin/Oders";
 import Intro from "../main/Intro";
 import SearchResult from "../header/SearchResult";
 import Login from "../admin/Login";
+import ProtectedRoute from "../admin/ProtectedRoute"; // thêm dòng này
+
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -16,28 +18,12 @@ const routers = createBrowserRouter([
     children: [],
   },
   {
-    path: path.addProducts,
-    element: <AddProduct />,
-  },
-  {
-    path: path.admin,
-    element: <Admin />,
-  },
-  {
     path: path.detailContentProduct,
     element: <DetailProduct />,
   },
   {
-    path: path.edit,
-    element: <AddProduct />,
-  },
-  {
     path: path.cart,
     element: <Cart />,
-  },
-  {
-    path: path.order,
-    element: <Oders />,
   },
   {
     path: path.introduce,
@@ -51,5 +37,40 @@ const routers = createBrowserRouter([
     path: path.LoginAdmin,
     element: <Login />,
   },
+
+  // Các route cần bảo vệ (chỉ admin đăng nhập mới vào được)
+  {
+    path: "/admin",
+    element: (
+      <ProtectedRoute>
+        <Admin />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: path.addProducts,
+    element: (
+      <ProtectedRoute>
+        <AddProduct />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: path.edit,
+    element: (
+      <ProtectedRoute>
+        <AddProduct />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: path.order,
+    element: (
+      <ProtectedRoute>
+        <Oders />
+      </ProtectedRoute>
+    ),
+  },
 ]);
+
 export default routers;

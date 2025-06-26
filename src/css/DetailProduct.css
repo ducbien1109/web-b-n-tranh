@@ -1,7 +1,7 @@
 .detail-container {
   padding: 40px 80px;
+  gap: 30px;
   display: flex;
-  gap: 40px;
   background-color: #f5f5f5;
 }
 
@@ -68,7 +68,7 @@
 
 .related-item img {
   width: 100%;
-  height: 320px;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -76,6 +76,21 @@
 
 .related-item:hover {
   transform: scale(1.05);
+}
+.zoom-container {
+  position: relative;
+  /* width: 300px; */
+  /* height: 400px; */
+  overflow: hidden;
+    border-radius: 12px;
+
+}
+
+.zoom-image {
+  width: 100%;
+  height: 350px;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
 }
 
 .related-item p {
@@ -108,7 +123,6 @@
     align-items: center;
     gap: 10px;
     justify-content: end;
-    /* align-items: flex-start; */
   }
 
   .related-title {
@@ -127,5 +141,9 @@
 
   .related-item img {
     height: 140px;
+  }
+  .zoom-container{
+    margin:  0 auto;
+    text-align: center;
   }
 }

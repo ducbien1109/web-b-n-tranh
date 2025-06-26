@@ -10,8 +10,13 @@ const Login = () => {
   const onFinish = async (values) => {
     try {
       const res = await axios.post("http://localhost:5000/login", values);
-      alert(res.data.message);
-      navigate("/admin");
+      if (res.data.success) {
+        alert(res.data.message);
+        localStorage.setItem("isLoggedIn", "true"); // ✅ Lưu trạng thái
+        navigate("/admin");
+      } else {
+        alert("Sai tài khoản hoặc mật khẩu!");
+      }
     } catch (error) {
       alert("Sai tài khoản hoặc mật khẩu!");
     }

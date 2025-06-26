@@ -151,9 +151,11 @@ import { useNavigate, useParams } from "react-router";
 const OPTIONS = [
   "Tranh sơn dầu",
   "Tranh sơn mài",
-  "Tranh màu nước",
-  "Gốm",
-  "Tranh lụa",
+  "màu nước và mực trên giấy Tuyên",
+  "Gốm men",
+  "màu nước và mực trên giấy Trúc",
+  "màu nước và mực trên lụa",
+  "acrylic trên toan"
 ];
 
 const AddProduct = () => {

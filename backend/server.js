@@ -196,15 +196,11 @@ app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
 
-  if (!user) {
-    return res.status(401).json({ message: "Tài khoản không tồn tại" });
+  if (!user || user.password !== password) {
+    return res.json({ success: false, message: "Sai tài khoản hoặc mật khẩu" });
   }
 
-  if (user.password !== password) {
-    return res.status(401).json({ message: "Sai mật khẩu" });
-  }
-
-  return res.json({ message: "Đăng nhập thành công", user });
+  return res.json({ success: true, message: "Đăng nhập thành công" });
 });
 // API lấy danh sách người dùng (tuỳ)
 app.get("/users", async (req, res) => {

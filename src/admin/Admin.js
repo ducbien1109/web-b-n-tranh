@@ -140,6 +140,11 @@ const Admin = () => {
   const handleOder = () => {
     navigate("/orders");
   };
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  };
+
   const menu = (
     <Menu>
       <Menu.Item key="1" icon={<UserOutlined />}>
@@ -149,7 +154,7 @@ const Admin = () => {
         Settings
       </Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="3" icon={<LogoutOutlined />}>
+      <Menu.Item key="3" icon={<LogoutOutlined />} onClick={handleLogout}>
         Logout
       </Menu.Item>
     </Menu>

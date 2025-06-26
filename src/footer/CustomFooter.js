@@ -65,7 +65,7 @@ const CustomFooter = () => {
 
       <div style={{ textAlign: "center", marginTop: 40 }}>
         <Text style={{ color: "#ffffff" }}>
-          © {new Date().getFullYear()} Ngô Đức Chí Gallery. All rights reserved.
+          © {new Date().getFullYear()} Ngô Đức Chí Gallery.
         </Text>
       </div>
     </Footer>

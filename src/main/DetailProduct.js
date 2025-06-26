@@ -244,7 +244,7 @@
 
 // export default DetailProduct;
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { toast } from "react-toastify";
@@ -264,6 +264,7 @@ const DetailProduct = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form] = Form.useForm();
   const navigate = useNavigate();
+  const imageRef = useRef();
 
   const getDetail = async (id) => {
     try {
@@ -336,14 +337,45 @@ const DetailProduct = () => {
       toast.error("Gửi đơn hàng thất bại");
     }
   };
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+
+    if (imageRef.current) {
+      imageRef.current.style.transformOrigin = `${x}% ${y}%`;
+      imageRef.current.style.transform = "scale(2)";
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (imageRef.current) {
+      imageRef.current.style.transform = "scale(1)";
+    }
+  };
+  //cuộn
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (id) {
+      getDetail(id);
+    }
+  }, [id]);
 
   return (
     <div>
       <Menuheader />
       <div className="detail-container">
-        <div className="detail-image">
-          <img src={detailProduct.image} alt={detailProduct.name} />
+        <div className="zoom-container">
+          <img
+            src={detailProduct.image}
+            alt={detailProduct.name}
+            className="zoom-image"
+            ref={imageRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          />
         </div>
+
         <div className="detail-info">
           <h2>{detailProduct.name}</h2>
           <h4>${detailProduct.price}</h4>

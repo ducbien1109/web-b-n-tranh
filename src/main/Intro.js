@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Row, Col, Card, Image, Divider } from "antd";
 import Menuheader from "../header/Menuheader";
-
+import anh7 from "../img/anh7.jpg";
 const { Title, Paragraph } = Typography;
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
             bodyStyle={{ padding: 0 }} // loại bỏ padding mặc định
           >
             <Image
-              src="https://png.pngtree.com/thumb_back/fh260/background/20230411/pngtree-flowers-spring-watercolor-pink-background-image_2204880.jpg"
+              src={anh7}
               alt="Tranh nghệ thuật"
               width="100%"
               height="auto"
@@ -56,11 +56,12 @@ const About = () => {
                 <Divider />
                 <Title level={4}>📍 Thông tin liên hệ</Title>
                 <Paragraph style={{ fontSize: 15 }}>
-                  <strong>Địa chỉ:</strong> 45 Trần Phú, Phố cổ Hội An
+                  <strong>Địa chỉ:</strong> 13 Nguyễn Huệ, Phường Hội An, Thành
+                  phố Đà Nẵng, Việt Nam
                   <br />
-                  <strong>Điện thoại:</strong> 0905 123 456
+                  <strong>Điện thoại:</strong> +84 0905659072
                   <br />
-                  <strong>Email:</strong> tranhnghethuat.ngoducchi@gmail.com
+                  <strong>Email:</strong> ducchi.hangiang@gmail.com
                 </Paragraph>
               </Typography>
             </div>

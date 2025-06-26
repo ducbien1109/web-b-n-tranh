@@ -195,9 +195,9 @@ const Menuheader = () => {
           )}
         </div>
 
-        <div className="Name-brand" onClick={handleHome}>
+        {/* <div className="Name-brand" onClick={handleHome}>
           THU HOA GALLERY
-        </div>
+        </div> */}
 
         <div className="header-right">
           <p onClick={handleHome}>Home</p>
