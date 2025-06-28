@@ -154,9 +154,9 @@ const Menuheader = () => {
     }
   };
 
-  const handleToCart = () => {
-    navigate("/cart");
-  };
+  // const handleToCart = () => {
+  //   navigate("/cart");
+  // };
 
   const handleIntro = () => {
     navigate("/intro");
@@ -173,7 +173,7 @@ const Menuheader = () => {
 
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
-    
+
     // Bạn có thể gọi API tìm kiếm ở đây nếu cần
   };
 
@@ -203,7 +203,7 @@ const Menuheader = () => {
           <p onClick={handleHome}>Home</p>
           <p onClick={handleIntro}>Introduce</p>
           {/* <UserOutlined className="icon" /> */}
-          <ShoppingCartOutlined className="icon" onClick={handleToCart} />
+          {/* <ShoppingCartOutlined className="icon" onClick={handleToCart} /> */}
         </div>
       </div>
 

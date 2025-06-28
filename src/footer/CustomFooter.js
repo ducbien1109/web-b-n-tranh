@@ -23,7 +23,7 @@ const CustomFooter = () => {
       <Row gutter={[32, 24]} justify="space-between">
         <Col xs={24} md={8}>
           <Title level={4} style={{ color: "#fff" }}>
-            🎨 NGÔ ĐỨC CHÍ GALLERY
+            🎨 NGO DUC CHI GALLERY
           </Title>
           <Text style={{ color: "#aaa" }}>
             Tôn vinh vẻ đẹp Hội An qua từng bức tranh mang đậm hồn Việt. Không
@@ -33,22 +33,24 @@ const CustomFooter = () => {
 
         <Col xs={24} md={8}>
           <Title level={4} style={{ color: "#fff" }}>
-            📍 Liên hệ
+            📍 Contact
           </Title>
           <p style={{ color: "#ccc", margin: 0 }}>
-            <EnvironmentOutlined /> 45 Trần Phú, Hội An
+            <EnvironmentOutlined /> 13 Nguyen hue, Hoi an, Thanh pho Da Nang,
+            Viet Nam
           </p>
           <p style={{ color: "#ccc", margin: 0 }}>
-            <PhoneOutlined /> 0905 123 456
+            <PhoneOutlined />
+            +84 0905 659 702
           </p>
           <p style={{ color: "#ccc", margin: 0 }}>
-            <MailOutlined /> tranhnghethuat.ngoducchi@gmail.com
+            <MailOutlined /> ducchi.hangiang@gmail.com
           </p>
         </Col>
 
         <Col xs={24} md={6}>
           <Title level={4} style={{ color: "#fff" }}>
-            🌐 Mạng xã hội
+            🌐 social network
           </Title>
           <p>
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
@@ -65,7 +67,7 @@ const CustomFooter = () => {
 
       <div style={{ textAlign: "center", marginTop: 40 }}>
         <Text style={{ color: "#ffffff" }}>
-          © {new Date().getFullYear()} Ngô Đức Chí Gallery.
+          © {new Date().getFullYear()} Ngo Duc Chi Gallery.
         </Text>
       </div>
     </Footer>

@@ -170,7 +170,7 @@ const Content = () => {
       <h2 className="content-title">Thu Hoa Gallery</h2>
       <div className="btn-sort">
         <Dropdown menu={{ items }} placement="bottomLeft">
-          <Button>Lọc theo giá</Button>
+          <Button>Filter by price</Button>
         </Dropdown>
       </div>
 

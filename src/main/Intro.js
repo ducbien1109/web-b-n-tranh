@@ -32,7 +32,7 @@ const About = () => {
               <Divider />
               <Typography>
                 <Title level={2} style={{ color: "#7c3e2e" }}>
-                  🎨 Cửa Hàng Tranh Hội An - Nghệ Sĩ Ngô Đức Chí
+                  🎨 Hoi An Painting Shop - Artist Ngo Duc Chi{" "}
                 </Title>
                 <Paragraph style={{ fontSize: 16, lineHeight: 1.7 }}>
                   Chào mừng bạn đến với không gian nghệ thuật của họa sĩ{" "}
@@ -54,10 +54,10 @@ const About = () => {
                   là yêu cái đẹp của Việt Nam.
                 </Paragraph>
                 <Divider />
-                <Title level={4}>📍 Thông tin liên hệ</Title>
+                <Title level={4}>📍 Contact</Title>
                 <Paragraph style={{ fontSize: 15 }}>
-                  <strong>Địa chỉ:</strong> 13 Nguyễn Huệ, Phường Hội An, Thành
-                  phố Đà Nẵng, Việt Nam
+                  <strong>Địa chỉ:</strong> 13 Nguyen hue, Phuong Hoi An, Thanh
+                  pho Da Nang, Viet Nam
                   <br />
                   <strong>Điện thoại:</strong> +84 0905659072
                   <br />

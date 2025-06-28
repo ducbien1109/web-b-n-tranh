@@ -298,15 +298,15 @@ const DetailProduct = () => {
     }
   }, [id]);
 
-  const handleCart = () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const isExist = cart.find((item) => item._id === detailProduct._id);
-    if (!isExist) {
-      cart.push(detailProduct);
-    }
-    localStorage.setItem("cart", JSON.stringify(cart));
-    navigate("/cart");
-  };
+  // const handleCart = () => {
+  //   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  //   const isExist = cart.find((item) => item._id === detailProduct._id);
+  //   if (!isExist) {
+  //     cart.push(detailProduct);
+  //   }
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  //   navigate("/cart");
+  // };
 
   const handleProductRelated = (productId) => {
     navigate(`/Product-each/${productId}`);
@@ -384,19 +384,19 @@ const DetailProduct = () => {
               .split("\n")
               .map((line, i) => <p key={i}>{line}</p>)}
           <div className="buyDetail">
-            <ShoppingCartOutlined
+            {/* <ShoppingCartOutlined
               style={{ fontSize: "40px", cursor: "pointer" }}
               onClick={handleCart}
-            />
+            /> */}
             <Button type="primary" onClick={showModal}>
-              Mua ngay
+              Buy
             </Button>
           </div>
         </div>
       </div>
 
       <h2 className="related-title">
-        Sản phẩm cùng loại: {detailProduct.categories?.[0]}
+        Similar: {detailProduct.categories?.[0]}
       </h2>
       <div className="related-products">
         {relateProduct
